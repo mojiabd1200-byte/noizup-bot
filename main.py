@@ -35,7 +35,7 @@ def save_videos():
 @dp.message(Command("start"))
 def start(message):
     aux_data = getattr(message, "aux_data", None)
-video_id = getattr(aux_data, "start_id", None) if aux_data else None
+    video_id = getattr(aux_data, "start_id", None) if aux_data else None
 
     if video_id and video_id in videos:
         item = videos[video_id]
